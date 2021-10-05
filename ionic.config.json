@@ -1,0 +1,8 @@
+{
+  "name": "Blog-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "dd1addad"
+}
