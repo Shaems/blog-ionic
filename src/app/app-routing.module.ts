@@ -11,9 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    path: 'post',
+    loadChildren: () => import('./detail-post/detail-post.module').then( m => m.DetailPostPageModule)
   }
+
 
 ];
 @NgModule({

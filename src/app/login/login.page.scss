@@ -1,6 +1,7 @@
 ion-content{
     --background: #f7fff7;
 
+
     #header{
         display: flex;
         flex-direction: column;
@@ -11,7 +12,7 @@ ion-content{
         font-weight: 700;
         font-size: 1.5rem;
         color: #1a535c;
-        margin-bottom: 15%;
+        margin-bottom: 5rem;
         margin-top: 10rem;
     }
 
@@ -22,7 +23,7 @@ ion-content{
         ion-button{
             --background: #1a535c;
             color: #f7fff7;
-            margin-top: 15%;
+            margin-top: 5rem;
             height: 3.3rem;
             font-size: 1.2rem;
             text-transform: initial;
