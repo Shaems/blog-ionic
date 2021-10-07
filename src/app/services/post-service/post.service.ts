@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ApiService } from '../api-service/api.service';
 
 @Injectable({
@@ -14,16 +15,21 @@ export class PostService {
     private api: ApiService,
   ) { }
 
-  getAllPost(){
-    this.api.get(this._URLroot+this._URLall)
+  // Traer todos los posts
+  getAllPost(): Observable<Posts>{
+    return this.api.get<Posts>(this._URLroot+this._URLall)
   }
 
   getPost(){}
 
   crearPost(){
-    this.api.post(this._URLroot+this._URLadd)
+    //this.api.post(this._URLroot+this._URLadd)
   }
 
+}
+
+export interface Posts{
+  posts: GetPost[];
 }
 
 export interface GetPost{
