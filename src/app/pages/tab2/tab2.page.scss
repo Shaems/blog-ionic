@@ -1,17 +1,19 @@
 ion-content{
     --background: #f7fff7;
 
+    ion-grid{
+        max-width: 40rem;
+    }
+
    #header{
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem 0.5rem;
+        padding: 0.2rem;
         color: #f7fff7;
     }
 
 
     #form{
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     ion-item{
         border-radius: 3rem;

@@ -25,7 +25,7 @@ export class Tab1Page implements OnInit {
   // Trae la lista de posts y los guarda en el componente
   getAllPost(){
     this._postService.getAllPost().subscribe( data =>{
-      console.log(data.posts[0])
+      console.log(data.posts.length)
       this.posts = data.posts
       this.posts.sort((a, b) => a.fecha < b.fecha ? 1 :
                                     (a.fecha > b.fecha ? -1 : 0))

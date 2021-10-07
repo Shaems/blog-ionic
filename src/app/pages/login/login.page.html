@@ -1,19 +1,23 @@
 <ion-content>
-  <div id='header'>
-    <h1>Iniciar sesión</h1>
-  </div>
-  
-  <form id='form' [formGroup]="loginForm" (ngSubmit)='iniciarSesion()'>
-    <ion-item>
-      <ion-input type='text' formControlName='email' placeholder='Email'></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type='password' formControlName='password' placeholder='Contraseña'></ion-input>
-    </ion-item>
+  <ion-grid class="ion-align-self-center">
+    <div id='header'>
+      <h1>Shaems Blog</h1>
+      <h3>Inicia sesión para crear tus post</h3>
+    </div>
     
-    <ion-button (click)="iniciarSesion()" expand="block" shape="round">
-      Ingresar
-    </ion-button>
-  </form>
+    <form id='form' [formGroup]="loginForm" (ngSubmit)='iniciarSesion()'>
+      <ion-item>
+        <ion-input type='text' formControlName='email' placeholder='Email'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type='password' formControlName='password' placeholder='Contraseña'></ion-input>
+      </ion-item>
+      
+      <ion-button (click)="iniciarSesion()" expand="block" shape="round">
+        Ingresar
+      </ion-button>
+    </form>
+
+  </ion-grid>
 
 </ion-content>

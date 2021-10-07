@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
 
-  <div>
+  <ion-grid class="ion-align-self-center">
     <form id='form' [formGroup]="addForm" (ngSubmit)='addPost()'>
       <ion-card>
           <ion-input type='text' formControlName='titulo' placeholder='Título'><ion-icon name="pencil-outline"></ion-icon></ion-input>
@@ -14,5 +14,5 @@
       </ion-fab>
 
     </form>
-  </div>
+  </ion-grid>
 </ion-content>

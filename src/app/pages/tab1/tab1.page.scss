@@ -6,10 +6,19 @@ ion-toolbar{
         color:#f7fff7;
         margin-top: 1rem;
     }
+    ion-badge{
+        color: #1a535c;
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
 }
 
 ion-content{
     --background: #f7fff7;
+
+    ion-grid{
+        max-width: 40rem;
+    }
 
     ion-card{
         border-radius: 1.5rem;

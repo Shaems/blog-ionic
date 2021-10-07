@@ -1,19 +1,27 @@
 ion-content{
     --background: #f7fff7;
 
+    ion-grid{
+        max-width: 40rem;
+    }
 
     #header{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        padding-left: 2rem;
     }
 
     h1{
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         color: #1a535c;
-        margin-bottom: 4rem;
-        margin-top: 10rem;
+        margin-bottom: -0.2rem;
+        margin-top: 8rem;
+    }
+    h3{
+        color: #1a535c;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
 
     #form{
@@ -38,7 +46,7 @@ ion-content{
         ion-button{
             --background: #1a535c;
             color: #f7fff7;
-            margin-top: 5rem;
+            margin-top: 4rem;
             height: 3.3rem;
             font-size: 1.2rem;
             text-transform: initial;
