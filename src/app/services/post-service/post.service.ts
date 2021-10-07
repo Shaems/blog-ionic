@@ -22,8 +22,8 @@ export class PostService {
 
   getPost(){}
 
-  crearPost(){
-    //this.api.post(this._URLroot+this._URLadd)
+  crearPost(body: NuevoPost): Observable<CreatedPost>{
+    return this.api.post<CreatedPost>(this._URLroot+this._URLadd, body)
   }
 
 }
@@ -37,5 +37,15 @@ export interface GetPost{
   titulo: string;
   descripcion: string;
   fecha: string;
+}
+
+export interface CreatedPost{
+  post: any;
+  message: string;
+}
+
+export interface NuevoPost{
+  titulo: string;
+  descripcion: string;
 }
 

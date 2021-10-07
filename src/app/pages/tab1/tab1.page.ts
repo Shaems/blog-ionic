@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GetPost, PostService } from 'src/app/services/post-service/post.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { GetPost, PostService } from 'src/app/services/post-service/post.service
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
 
   posts: GetPost[] = [];
 
@@ -23,6 +23,8 @@ export class Tab1Page {
     this._postService.getAllPost().subscribe( data =>{
       console.log(data.posts[0])
       this.posts = data.posts
+      this.posts.sort((a, b) => a.fecha < b.fecha ? 1 :
+                                    (a.fecha > b.fecha ? -1 : 0))
     })
   }
 }
