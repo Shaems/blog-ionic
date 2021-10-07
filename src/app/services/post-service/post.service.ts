@@ -1,15 +1,29 @@
 import { Injectable } from '@angular/core';
+import { ApiService } from '../api-service/api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  constructor() { }
+  _URLroot = '/posts'
+  _URLall = '/all'
+  _URLadd = '/add'
 
-  crearPost() {
+  constructor(
+    private api: ApiService,
+  ) { }
 
+  getAllPost(){
+    this.api.get(this._URLroot+this._URLall)
   }
+
+  getPost(){}
+
+  crearPost(){
+    this.api.post(this._URLroot+this._URLadd)
+  }
+
 }
 
 export interface GetPost{
