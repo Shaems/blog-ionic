@@ -6,7 +6,7 @@ import { GetPost, PostService } from 'src/app/services/post-service/post.service
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
 
   posts: GetPost[] = [];
 
@@ -14,7 +14,10 @@ export class Tab1Page {
     private _postService: PostService,
   ) {}
 
-
+  ngOnInit(){
+    this.getAllPost();
+  }
+  
   ionViewWillEnter(){
     this.getAllPost();
   }

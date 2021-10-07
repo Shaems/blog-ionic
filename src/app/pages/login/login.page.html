@@ -4,8 +4,13 @@
   </div>
   
   <form id='form' [formGroup]="loginForm" (ngSubmit)='iniciarSesion()'>
-    <ion-input type='text' formControlName='email' placeholder='Email'></ion-input>
-    <ion-input type='password' formControlName='password' placeholder='Contraseña'></ion-input>
+    <ion-item>
+      <ion-input type='text' formControlName='email' placeholder='Email'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type='password' formControlName='password' placeholder='Contraseña'></ion-input>
+    </ion-item>
+    
     <ion-button (click)="iniciarSesion()" expand="block" shape="round">
       Ingresar
     </ion-button>

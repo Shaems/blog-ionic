@@ -1,7 +1,7 @@
 <ion-content>
   <div id="header">
     <ion-buttons>
-      <ion-button rouerLink="">
+      <ion-button [routerLink]="['/tabs/tab1']">
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -15,9 +15,9 @@
   <!-- Post Detail -->
 
   <div class="card">
-    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-title>{{post.titulo}}</ion-card-title>
     <ion-card-content>
-      Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+      {{post.descripcion}}
     </ion-card-content>
   </div>
 

@@ -20,8 +20,6 @@ export class PostService {
     return this.api.get<Posts>(this._URLroot+this._URLall)
   }
 
-  getPost(){}
-
   crearPost(body: NuevoPost): Observable<CreatedPost>{
     return this.api.post<CreatedPost>(this._URLroot+this._URLadd, body)
   }

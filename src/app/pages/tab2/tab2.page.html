@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <form id='form' [formGroup]="addForm" (ngSubmit)='addPost()'>
-    <ion-input type='text' formControlName='titulo' placeholder='Titulo'></ion-input>
-    <ion-textarea formControlName='descripcion' placeholder='Descripcion' rows="6"></ion-textarea>
-    <ion-button (click)="addPost()" expand="block" shape="round">
-      Guardar
-    </ion-button>
-  </form>
+
+  <div>
+    <form id='form' [formGroup]="addForm" (ngSubmit)='addPost()'>
+      <ion-card>
+          <ion-input type='text' formControlName='titulo' placeholder='Título'><ion-icon name="pencil-outline"></ion-icon></ion-input>
+        <ion-textarea class='descrip' formControlName='descripcion' placeholder='Nuevo Post' rows="30"></ion-textarea>
+      </ion-card>
+
+      <ion-fab vertical="bottom" horizontal="end">
+        <ion-fab-button (click)="addPost()">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+    </form>
+  </div>
 </ion-content>

@@ -1,3 +1,29 @@
+ion-toolbar{
+    --background: #1a535c;
+    height: 5rem;
+
+    ion-title{
+        color:#f7fff7;
+        margin-top: 1rem;
+    }
+}
+
 ion-content{
     --background: #f7fff7;
+
+    ion-card{
+        border-radius: 1.5rem;
+        padding: 0.2rem;
+
+        ion-card-title{
+            color: #1a535c;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        ion-card-content{
+            font-size: 1.1rem;
+        }
+    }
+
 }
