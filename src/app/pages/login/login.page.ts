@@ -28,6 +28,7 @@ export class LoginPage implements OnInit {
     this.authService.login(this.loginForm.value.email, this.loginForm.value.password)
       .subscribe( token => {
         console.log(token)
+        localStorage.setItem('token', token.token)
       })
   }
 

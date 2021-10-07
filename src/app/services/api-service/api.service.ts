@@ -17,7 +17,7 @@ export class ApiService {
   }
 
   post<T>(path: string, body) {
-    return this.http.post(this._URLprincipal + path, body);
+    return this.http.post<T>(this._URLprincipal + path, body);
   }
 
 }

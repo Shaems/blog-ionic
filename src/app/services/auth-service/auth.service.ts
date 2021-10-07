@@ -13,7 +13,7 @@ export class AuthService {
     private api: ApiService,
   ) { }
 
-  login(email, pass): Observable<Object>  {
+  login(email, pass): Observable<Token>  {
     let body = {
       email: email,
       password: pass
